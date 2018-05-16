@@ -58,7 +58,7 @@ And here's visualization of Color Histogram features and Bin Sptial features:
 
 #### 2. Explain how you settled on your final choice of HOG parameters.
 
-I tried various combinations of parameters to extract HOG parameters. Whenever I use 'ALL' for hog_channel, it keeps giving "Memory Error". I spent a lot of time trying to make it work through, but it seems that the data is too big for the scaler to work (in memory calculation). Thus I decided to get the lowest accuracy by tuning other parameters. The parameters I tuned in the end is: color_space = 'LUV', orient = 8, pix_per_cell = 8, cell_per_block = 2, hog_channel = 0. 
+I tried various combinations of parameters to extract HOG parameters. Whenever I use 'ALL' for hog_channel, it keeps giving "Memory Error". I spent a lot of time trying to make it work through, but it seems that the data is too big for the scaler to work (in memory calculation). Thus I decided to get the highest accuracy by tuning other parameters. The parameters I tuned in the end is: color_space = 'LUV', orient = 8, pix_per_cell = 8, cell_per_block = 2, hog_channel = 0. 
 For color hist features and bin spatial features, the parameter I set is: spatial_size = (16, 16), hist_bins = 32.
 
 #### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
